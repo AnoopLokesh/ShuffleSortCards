@@ -1,0 +1,238 @@
+:root {
+    --headingFontColor: #000000;
+    --headingBackgroundColor: #ffffff;
+    --buttonshadow: #2B8EAD;
+    --buttonColor: #72C3DC;
+    --buttonFontColor: #ffffff;
+    --containerBackgroundColor: #efefef;
+    --containerBorderColor: #d9d9d9;
+    --cardBgColor1: #2B8EAD;
+    --cardBgColor2: #3498db;
+    --cardBgColor3: #2F454E;
+    --cardBgColor4: #3498db;
+    --cardBgColor5: #2F454E;
+    --cardBgColor6: #d9d9d9;
+    --cardBgColor7: #d9d9d9;
+    --cardBgColor8: #2B8EAD;
+    --cardBgColor9: #2F454E;
+    --gridFontColor: #ffffff;
+    --mGridFontColor: #333333;
+    --mContainerBackgroundColor: #ffffff;
+    --mheadingBackgroundColor: #333333;
+    --mheadingFontColor: #ffffff;
+    --mGridBackgroundColor: #efefef;
+    --mMainBorderColor: #000000;
+}
+
+body {
+    font-family: "Lucida Sans", sans-serif;
+    text-align: center;
+}
+
+.desktop,
+.mobile {
+    display: none;
+}
+
+@media screen and (min-width: 960px) {
+    .desktop {
+        display: block;
+    }
+    .main {
+        margin: auto;
+        width: 600px;
+        display: flex;
+        flex: 1;
+        background-color: var(--containerBackgroundColor);
+        flex-direction: column;
+    }
+    .heading {
+        color: var(--headingFontColor);
+        background-color: var(--headingBackgroundColor);
+        text-align: center;
+        font-weight: normal;
+    }
+    .footer {
+        color: var(--headingFontColor);
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+    .container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        padding-bottom: 3%;
+        border-top: 4px solid var(--containerBorderColor);
+    }
+    .box-right {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        width: 120px;
+        justify-content: start;
+        padding: 12px;
+    }
+    .box-left {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .grid-item {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 33.3%;
+        color: var(--gridFontColor);
+        box-sizing: border-box;
+        font-size: 2rem;
+    }
+    .grid-item::after {
+        padding-bottom: 100%;
+        display: block;
+        content: "";
+    }
+    .card-bgcolor1 {
+        background-color: var(--cardBgColor1);
+    }
+    .card-bgcolor2 {
+        background-color: var(--cardBgColor2);
+    }
+    .card-bgcolor3 {
+        background-color: var(--cardBgColor3);
+    }
+    .card-bgcolor4 {
+        background-color: var(--cardBgColor4);
+    }
+    .card-bgcolor5 {
+        background-color: var(--cardBgColor5);
+    }
+    .card-bgcolor6 {
+        background-color: var(--cardBgColor6);
+    }
+    .card-bgcolor7 {
+        background-color: var(--cardBgColor7);
+    }
+    .card-bgcolor8 {
+        background-color: var(--cardBgColor8);
+    }
+    .card-bgcolor9 {
+        background-color: var(--cardBgColor9);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .mobile {
+        display: block;
+    }
+    .main {
+        width: 95%;
+        display: flex;
+        flex: 1;
+        background-color: var(--mContainerBackgroundColor);
+        flex-direction: column;
+        border: 7px solid var(--mMainBorderColor);
+        border-radius: 5px;
+    }
+    .heading {
+        color: var(--mheadingFontColor);
+        background-color: var(--mheadingFontColor);
+        text-align: center;
+        font-weight: lighter;
+        font-size: 12px;
+        padding: 5px;
+        background-color: var(--mheadingBackgroundColor);
+    }
+    .footer {
+        color: var(--headingFontColor);
+        text-align: center;
+        font-style: italic;
+        font-size: 10px;
+        padding: 5px;
+    }
+    .container {
+        width: 90%;
+        background-color: var(--mContainerBackgroundColor);
+        margin: auto;
+        display: flex;
+        flex: 1;
+        flex-direction: column-reverse;
+    }
+    .box-right {
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        padding: 0px 35px;
+    }
+    .box-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: 5px;
+    }
+    .grid-item {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        box-sizing: border-box;
+        min-height: 30px;
+        margin-bottom: 3px;
+        color: var(--mGridFontColor);
+    }
+    .card-bgcolor1 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor1);
+    }
+    .card-bgcolor2 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor2);
+    }
+    .card-bgcolor3 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor3);
+    }
+    .card-bgcolor4 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor4);
+    }
+    .card-bgcolor5 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor5);
+    }
+    .card-bgcolor6 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor6);
+    }
+    .card-bgcolor7 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor7);
+    }
+    .card-bgcolor8 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor8);
+    }
+    .card-bgcolor9 {
+        background-color: var(--mGridBackgroundColor);
+        border-left: 6px solid var(--cardBgColor9);
+    }
+}
+
+.button {
+    width: 114px;
+    text-align: center;
+    margin: 12px 2px;
+    padding: 11px;
+    font-size: 10px;
+    color: var(--buttonFontColor);
+    background-color: var(--buttonColor);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px var(--buttonshadow);
+    cursor: pointer;
+}
